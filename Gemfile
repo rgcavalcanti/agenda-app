@@ -27,10 +27,11 @@ group :development do
 end
 
 group :test do
+  gem 'capybara'
+  gem 'chromedriver-helper'
   gem 'cucumber-rails', require: false
   gem 'database_cleaner'
   gem 'selenium-webdriver'
-  gem 'capybara'
 end
 
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]

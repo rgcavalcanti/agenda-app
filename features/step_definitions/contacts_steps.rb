@@ -23,9 +23,7 @@ Quando('altero o campo {string} com {string}') do |field, value|
 end
 
 Quando('confirmo o modal') do
-  accept_alert do
-    click_link('OK')
-  end
+  page.driver.browser.switch_to.alert.accept
 end
 
 Então('devo ver na tela {string}') do |message|
