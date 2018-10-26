@@ -1,24 +1,23 @@
-# README
+[![Build Status](https://travis-ci.com/rgcavalcanti/agenda-app.svg?branch=master)](https://travis-ci.com/rgcavalcanti/agenda-app)
+# Projeto de demosntração
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Esse projeto é uma aplicação simples de uma agenda que tem por objetive exemplificar o processo de BDD no desenvolvimento de software
 
-Things you may want to cover:
+## Requisitos
 
-* Ruby version
+* Ruby 2.5.1
+* sqlite3-dev
 
-* System dependencies
+## Execução
 
-* Configuration
+Após instalar as gems com o comando:
 
-* Database creation
+```bash
+$ bundle
+```
 
-* Database initialization
+Basa rodar o cucumber
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```bash
+$ rails cucumber
+```
