@@ -1,0 +1,8 @@
+<% if flash.presence %>
+  <div class="alert alert-<%= flash.keys.first%> mt-2 alert-dismissible fade show" role="alert">
+    <%= flash[flash.keys.first] %>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+<% end %>

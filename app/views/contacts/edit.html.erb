@@ -1,6 +1,16 @@
-<h1>Editing Contact</h1>
-
-<%= render 'form', contact: @contact %>
-
-<%= link_to 'Show', @contact %> |
-<%= link_to 'Back', contacts_path %>
+<div class="row">
+  <div class="col-12 d-flex py-2 justify-content-end">
+    <%= link_to 'Ver', @contact, class: "btn btn-info btn-sm mr-2" %>
+    <%= link_to 'Voltar', contacts_path, class: "btn btn-info btn-sm" %>
+  </div>
+  <div class="col-12">
+    <div class="card">
+      <h3 class="card-header text-white bg-dark">
+        Editar Contato
+      </h3>
+      <div class="card-body">
+        <%= render 'form', contact: @contact %>
+      </div>
+    </div>
+  </div>
+</div>
