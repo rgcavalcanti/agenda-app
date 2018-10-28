@@ -8,7 +8,7 @@
         Contatos
       </h3>
       <div class="card-body">
-        <table class="table table-bordered">
+        <table class="d-none d-md-table table table-bordered">
           <thead>
             <tr>
               <th>Nome</th>
@@ -33,6 +33,32 @@
             <% end %>
           </tbody>
         </table>
+        <% @contacts.each do |contact| %>
+          <div class="d-flex d-md-none card mb-2">
+            <p class="card-header">
+              Contato <%= contact.name %>
+            </p>
+            <div class="card-body">
+              <p>
+                <strong>Nome:</strong>
+                <%= contact.name %>
+              </p>
+
+              <p>
+                <strong>Telefone:</strong>
+                <%= contact.phone %>
+              </p>
+
+              <p>
+                <strong>E-mail:</strong>
+                <%= contact.email %>
+              </p>
+              <%= link_to 'ver', contact, class: "btn btn-dark" %>
+              <%= link_to 'editar', edit_contact_path(contact), class: "btn btn-dark" %>
+              <%= link_to 'apagar', contact, method: :delete, data: { confirm: 'Você tem certeza?' }, class: "btn btn-danger" %>
+            </div>
+          </div>
+        <% end %>
       </div>
     </div>
   </div>
